@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>©AykolinoApps</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom Styles & Animationen */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #f5f5f5;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .card {
+            background-color: rgba(23, 23, 23, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(139, 92, 246, 0.5); /* Violet-500 */
+        }
+        
+        .glow-effect {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0) 60%);
+            animation: rotateGlow 15s linear infinite;
+        }
+
+        @keyframes rotateGlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* --- Logo Animationen --- */
+
+        /* UTM-Generator Logo */
+        .logo-utm {
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+        .utm-center {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 2s infinite ease-in-out;
+        }
+        .utm-dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: #a78bfa;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            margin: -4px;
+        }
+        .utm-dot:nth-child(2) { animation: utm-orbit 4s infinite linear; animation-delay: 0s; }
+        .utm-dot:nth-child(3) { animation: utm-orbit 4s infinite linear; animation-delay: -1s; }
+        .utm-dot:nth-child(4) { animation: utm-orbit 4s infinite linear; animation-delay: -2s; }
+        .utm-dot:nth-child(5) { animation: utm-orbit 4s infinite linear; animation-delay: -3s; }
+        
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+            50% { transform: translate(-50%, -50%) scale(1.1); box-shadow: 0 0 20px 10px rgba(59, 130, 246, 0); }
+        }
+        @keyframes utm-orbit {
+            from { transform: rotate(0deg) translateX(30px) rotate(0deg); }
+            to { transform: rotate(360deg) translateX(30px) rotate(-360deg); }
+        }
+
+
+        /* HTML-Translator Logo */
+        .logo-html {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ec4899;
+        }
+        .html-arrow {
+            font-size: 1.5rem;
+            animation: html-translate 2s infinite ease-in-out;
+            color: #f5f5f5;
+        }
+        @keyframes html-translate {
+            0%, 100% { transform: translateX(0); opacity: 0.7; }
+            50% { transform: translateX(8px) scale(1.1); opacity: 1; }
+        }
+
+        /* Excel-Comparison Logo */
+        .logo-excel {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+        .excel-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            width: 30px;
+            height: 40px;
+        }
+        .excel-cell {
+            width: 8px;
+            height: 8px;
+            background-color: #10b981;
+            border-radius: 1px;
+            opacity: 0.6;
+        }
+        .excel-grid .excel-cell:nth-child(2) { background-color: #3b82f6; }
+        .excel-grid .excel-cell:nth-child(5) { animation: excel-blink 2.5s infinite; animation-delay: 0.5s; }
+        .excel-grid .excel-cell:nth-child(8) { background-color: #f97316; }
+
+        @keyframes excel-blink {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.4); opacity: 1; }
+        }
+
+        /* Articlenumber-Generator Logo */
+        .logo-an {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5rem;
+            color: #facc15; /* Yellow-400 */
+            overflow: hidden;
+            position: relative;
+        }
+        .an-number {
+            position: absolute;
+            animation: an-scroll 3s infinite linear;
+        }
+        .an-number:nth-child(1) { animation-delay: 0s; }
+        .an-number:nth-child(2) { animation-delay: -1s; }
+        .an-number:nth-child(3) { animation-delay: -2s; }
+
+        @keyframes an-scroll {
+            0% { transform: translateY(-100%); opacity: 0; }
+            20%, 80% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(100%); opacity: 0; }
+        }
+
+        /* Scroll-in Animation */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Background Glow -->
+    <div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden">
+        <div class="glow-effect"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Header / Hero Section -->
+        <header class="min-h-[85vh] flex flex-col justify-center items-center text-center py-20">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight fade-in-up">
+                    Innovative <span class="gradient-text">Web-Tools</span> für deinen Workflow
+                </h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto fade-in-up" style="transition-delay: 150ms;">
+                    Hallo! Ich bin Ayko, ein "Azubi", der leidenschaftlich gerne nützliche und einfach zu bedienende Apps erstellt. Entdecke meine Projekte, die dir die Arbeit erleichtern.
+                </p>
+            </div>
+        </header>
+
+        <!-- Apps Section -->
+        <main id="apps" class="pb-24">
+            <h2 class="text-4xl font-bold text-center mb-16 fade-in-up">Meine Projekte</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+                <!-- Card 1: UTM-Generator -->
+                <a href="https://utm-generator.aykolino.de/" target="_blank" class="block fade-in-up" style="transition-delay: 100ms;">
+                    <div class="card rounded-2xl p-8 h-full flex flex-col items-center text-center">
+                        <div class="logo-utm mb-6">
+                            <div class="utm-center"></div>
+                            <div class="utm-dot"></div>
+                            <div class="utm-dot"></div>
+                            <div class="utm-dot"></div>
+                            <div class="utm-dot"></div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">UTM-Generator</h3>
+                        <p class="text-gray-400 flex-grow">Erstellt schnell und fehlerfrei UTM-Parameter für präzises Kampagnen-Tracking.</p>
+                        <span class="mt-6 text-violet-400 font-semibold">Ansehen →</span>
+                    </div>
+                </a>
+
+                <!-- Card 2: HTML-Translator -->
+                <a href="https://html-translator.aykolino.de/" target="_blank" class="block fade-in-up" style="transition-delay: 200ms;">
+                    <div class="card rounded-2xl p-8 h-full flex flex-col items-center text-center">
+                        <div class="logo-html mb-6">
+                            <span>&lt;</span>
+                            <span class="html-arrow">⇄</span>
+                            <span>&gt;</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">HTML-Translator</h3>
+                        <p class="text-gray-400 flex-grow">Übersetzt Texte innerhalb von HTML-Code, ohne die Struktur zu zerstören.</p>
+                        <span class="mt-6 text-violet-400 font-semibold">Ansehen →</span>
+                    </div>
+                </a>
+                
+                <!-- Card 3: Excel-Comparison -->
+                <a href="https://excel-comparison.aykolino.de/" target="_blank" class="block fade-in-up" style="transition-delay: 300ms;">
+                    <div class="card rounded-2xl p-8 h-full flex flex-col items-center text-center">
+                       <div class="logo-excel mb-6">
+                           <div class="excel-grid">
+                                <div class="excel-cell"></div><div class="excel-cell"></div><div class="excel-cell"></div>
+                                <div class="excel-cell"></div><div class="excel-cell"></div><div class="excel-cell"></div>
+                                <div class="excel-cell"></div><div class="excel-cell"></div><div class="excel-cell"></div>
+                           </div>
+                           <div class="excel-grid">
+                                <div class="excel-cell"></div><div class="excel-cell"></div><div class="excel-cell"></div>
+                                <div class="excel-cell"></div><div class="excel-cell"></div><div class="excel-cell"></div>
+                                <div class="excel-cell"></div><div class="excel-cell"></div><div class="excel-cell"></div>
+                           </div>
+                       </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Excel-Comparison</h3>
+                        <p class="text-gray-400 flex-grow">Vergleicht zwei Excel-Tabellen und hebt die Unterschiede deutlich hervor.</p>
+                        <span class="mt-6 text-violet-400 font-semibold">Ansehen →</span>
+                    </div>
+                </a>
+
+                <!-- Card 4: Articlenumber-Generator -->
+                <a href="https://an-generator.aykolino.de/" target="_blank" class="block fade-in-up" style="transition-delay: 400ms;">
+                    <div class="card rounded-2xl p-8 h-full flex flex-col items-center text-center">
+                        <div class="logo-an mb-6">
+                            <span class="an-number">8351</span>
+                            <span class="an-number">4927</span>
+                            <span class="an-number">1064</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Articlenumber-Generator</h3>
+                        <p class="text-gray-400 flex-grow">Generiert einzigartige und formatierte Artikelnummern nach definierbaren Mustern.</p>
+                        <span class="mt-6 text-violet-400 font-semibold">Ansehen →</span>
+                    </div>
+                </a>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center py-10 border-t border-gray-800">
+            <p class="text-gray-500">
+                &copy; <span id="year"></span> AykolinoApps. Mit Leidenschaft erstellt.
+            </p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Scroll-in Animation Logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        const elementsToAnimate = document.querySelectorAll('.fade-in-up');
+        elementsToAnimate.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
+
