@@ -157,33 +157,32 @@
             50% { transform: scale(1.4); opacity: 1; }
         }
 
-        /* Articlenumber-Generator Logo */
+        /* Articlenumber-Generator Logo (Improved) */
         .logo-an {
             width: 80px;
             height: 80px;
             background-color: rgba(255,255,255,0.05);
             border-radius: 8px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             font-family: 'Courier New', Courier, monospace;
             font-size: 1.5rem;
             color: #facc15; /* Yellow-400 */
             overflow: hidden;
-            position: relative;
         }
-        .an-number {
-            position: absolute;
-            animation: an-scroll 3s infinite linear;
+        .an-reel {
+            animation: an-scroll-reel 4.5s infinite;
+            animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
         }
-        .an-number:nth-child(1) { animation-delay: 0s; }
-        .an-number:nth-child(2) { animation-delay: -1s; }
-        .an-number:nth-child(3) { animation-delay: -2s; }
-
-        @keyframes an-scroll {
-            0% { transform: translateY(-100%); opacity: 0; }
-            20%, 80% { transform: translateY(0); opacity: 1; }
-            100% { transform: translateY(100%); opacity: 0; }
+        .an-number-item {
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @keyframes an-scroll-reel {
+            0%, 25% { transform: translateY(0); }         /* Show #1 */
+            30%, 55% { transform: translateY(-80px); }    /* Show #2 */
+            60%, 85% { transform: translateY(-160px); }   /* Show #3 */
+            90%, 100% { transform: translateY(-240px); }  /* Scroll to end for loop */
         }
 
         /* Scroll-in Animation */
@@ -324,6 +323,7 @@
     </script>
 </body>
 </html>
+
 
 
 
