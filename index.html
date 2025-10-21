@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" class="scroll-smooth">
-<head>
+<html lang="de" class="scroll-smooth"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MBUPS - ©AykolinoApps</title>
@@ -10,8 +9,8 @@
     
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
     <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
 
 
@@ -197,7 +196,107 @@
         }
 
     </style>
-</head>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #f5f5f5;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+        }
+
+        .glow-effect {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, rgba(99, 102, 241, 0) 60%);
+            animation: rotateGlow 20s linear infinite;
+        }
+
+        @keyframes rotateGlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .header {
+            animation: fadeInDown 0.8s ease-out;
+        }
+        
+        .header-scrolled {
+            background-color: rgba(10, 10, 10, 0.7);
+            border-bottom-color: rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Slider Styles */
+        .slider-container {
+            scrollbar-width: none; /* Firefox */
+        }
+        .slider-container::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, and Opera */
+        }
+        .slider-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .slider-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Language Switcher Styles */
+        .lang-switcher-dropdown {
+            display: none; /* Controlled by JavaScript now */
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 10px;
+            background-color: #111827; /* bg-gray-900 */
+            border-radius: 0.5rem; /* rounded-lg */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            width: 140px;
+            z-index: 60; /* Ensure it's above other content */
+        }
+        /* REMOVED .lang-switcher:hover .lang-switcher-dropdown rule */
+    </style></head>
 <body class="overflow-x-hidden">
 
     <!-- Background Glow -->
@@ -210,19 +309,65 @@
 
         <!-- Header / Hero Section -->
         <!-- MODIFIED: Reduced min-height and vertical padding to decrease space -->
-        <header class="flex flex-col justify-center items-center text-center pt-24 pb-12">
-            <div class="max-w-3xl">
-                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight fade-in-up">
-                    Innovative <span class="gradient-text">Web-Tools</span> für <a href="https://usedparts.mercedes-benz.de/startseite/" style="color: white; text-decoration: underline;">MBUPS</a>
+        <header class="flex flex-col justify-center items-center text-center pt-32 pb-24">
+            <div class="max-w-4xl">
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight fade-in-up" data-translate-key="heroTitle">
+                    Ihre Vision, unser Code: <span class="gradient-text">Intelligente Web-Lösungen</span>
                 </h1>
-                <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto fade-in-up" style="transition-delay: 150ms;">
-                    Hey! Ich bin Ayko, MBUPS-Praktikant der nützliche und einfach zu bedienende Web-Apps für euer Unternehmen entwickelt. 
+                <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto fade-in-up" style="transition-delay: 150ms;" data-translate-key="heroSubtitle">
+                    Smarte KI, kluges Prompt Engineering – Ihre Workflows neu gedacht. Automatisieren, beschleunigen, begeistern.
                 </p>
-                <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto fade-in-up" style="transition-delay: 150ms;">
-                    Meine Tools helfen dir, Arbeitszeit zu sparen und deinen Workflow zu automatisieren – ganz ohne komplizierte Technik.
-                </p>
+                <div class="mt-12 fade-in-up" style="transition-delay: 300ms;">
+                    <a href="https://mbups-projekt.aykolino.de" class="cta-button inline-block text-white font-bold text-lg px-8 py-4 rounded-full" data-translate-key="heroCta">
+                        Zum MBUPS-Projekt
+                    </a>
+                    <p class="mt-4 text-gray-400 text-sm tracking-widest uppercase" data-translate-key="heroComingSoon">…more Projects coming soon</p>
+                </div>
             </div>
-        </header>
+        </header><nav id="main-header" class="header fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b border-transparent transition-colors duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="text-2xl font-bold tracking-tight text-white">
+                    Aykolino<span class="gradient-text">Apps</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="https://uebermich.aykolino.de" class="text-gray-300 hover:text-white transition-colors" data-translate-key="navAbout">Über mich</a>
+                    <a href="mailto:ayko.tiedtke2@yahoo.de" class="text-gray-300 hover:text-white transition-colors" data-translate-key="navContact">Kontakt</a>
+                    <div class="relative lang-switcher">
+                        <button id="lang-switcher-button" class="flex items-center text-gray-300 hover:text-white transition-colors">
+                            <img id="current-flag-desktop" src="" alt="Language flag" class="w-5 h-auto mr-2 rounded-sm object-cover">
+                            <span id="current-lang-desktop">DE</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </button>
+                        <div id="lang-switcher-dropdown" class="lang-switcher-dropdown">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700" onclick="setLanguage('de')">Deutsch</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700" onclick="setLanguage('en')">English</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700" onclick="setLanguage('fr')">Français</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700" onclick="setLanguage('es')">Español</a>
+                        </div>
+                    </div>
+                    </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="https://uebermich.aykolino.de" class="block py-3 px-4 text-sm text-gray-200 hover:bg-gray-800" data-translate-key="navAboutMobile">Über mich</a>
+            <a href="mailto:ayko.tiedtke2@yahoo.de" class="block py-3 px-4 text-sm text-gray-200 hover:bg-gray-800" data-translate-key="navContactMobile">Kontakt</a>
+            <div class="px-4 pt-3 pb-1 border-t border-gray-700">
+                <p class="text-xs text-gray-400" data-translate-key="languageLabelMobile">Sprache:</p>
+                <a href="#" class="block py-2 text-sm text-gray-200 hover:bg-gray-800" onclick="setLanguage('de')">Deutsch</a>
+                <a href="#" class="block py-2 text-sm text-gray-200 hover:bg-gray-800" onclick="setLanguage('en')">English</a>
+                <a href="#" class="block py-2 text-sm text-gray-200 hover:bg-gray-800" onclick="setLanguage('fr')">Français</a>
+                <a href="#" class="block py-2 text-sm text-gray-200 hover:bg-gray-800" onclick="setLanguage('es')">Español</a>
+            </div>
+        </div>
+    </nav>
 
         <!-- Apps Section -->
         <main id="apps" class="pb-24">
@@ -303,9 +448,12 @@
         </main>
 
         <!-- Footer -->
-        <footer class="text-center py-10 border-t border-gray-800">
-            <p class="text-gray-500">
-                &copy; <span id="year"></span> AykolinoApps. Mit Leidenschaft.
+        <footer class="text-center py-10 mt-20 border-t border-gray-800">
+            <p class="text-gray-500" data-translate-key="footerText">
+                © <span id="year"></span> AykolinoApps. Mit Leidenschaft.
+            </p>
+            <p class="text-xs text-gray-600 mt-2" data-translate-key="footerDisclaimer">
+                Diese Domain wird nicht für gewerbliche zwecke genutzt.
             </p>
         </footer>
 
@@ -329,6 +477,248 @@
         const elementsToAnimate = document.querySelectorAll('.fade-in-up');
         elementsToAnimate.forEach(el => observer.observe(el));
     </script>
-</body>
-</html>
 
+
+
+<script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // --- LANGUAGE SWITCHER LOGIC ---
+        const translations = {
+            'de': {
+                langName: 'DE',
+                flagUrl: 'https://flagcdn.com/w20/de.png',
+                navAbout: 'Über mich',
+                navContact: 'Kontakt',
+                navAboutMobile: 'Über mich',
+                navContactMobile: 'Kontakt',
+                languageLabelMobile: 'Sprache:',
+                heroTitle: 'Ihre Vision, unser Code: <span class="gradient-text">Intelligente Web-Lösungen</span>',
+                heroSubtitle: 'Smarte KI, kluges Prompt Engineering – Ihre Workflows neu gedacht. Automatisieren, beschleunigen, begeistern.',
+                heroCta: 'Zum MBUPS-Projekt',
+                heroComingSoon: '…mehr Projekte folgen bald',
+                toolsTitle: 'Ein kleiner Tool Überblick:',
+                utmTitle: 'UTM-Generator',
+                utmDesc: 'Erstellt schnell und fehlerfrei UTM-Parameter für präzises Kampagnen-Tracking.',
+                htmlTitle: 'HTML-Translator',
+                htmlDesc: 'Übersetzt Texte innerhalb von HTML-Code, ohne die Struktur zu zerstören.',
+                htmlLongDesc: 'Der HTML-Translator ist das perfekte Tool für alle, die Texte innerhalb von HTML-Code schnell, präzise und strukturerhaltend übersetzen möchten. Egal ob Sie mehrsprachige Websites betreiben, Blogartikel lokalisieren oder E-Commerce-Inhalte anpassen – der HTML-Translator übersetzt Ihre Inhalte ohne die HTML-Struktur zu beschädigen.',
+                seoTitle: 'SEO-Generator',
+                seoDesc: 'Schnell & einfach SEO-optimierte Texte generieren lassen.',
+                seoLongDesc: 'Der SEO-Generator ist das perfekte Tool für alle, die unkompliziert & schnell, einen perfekten SEO-optimierten Text erstellen möchten. Die hinterlegte Google-API ist perfekt dafür!',
+                comingSoonTitle: 'Kommt bald..',
+                comingSoonDesc: 'Kommt bald...',
+                footerText: '© <span id="year-footer-1"></span> AykolinoApps. Mit Leidenschaft.',
+                footerDisclaimer: 'Diese Domain wird nicht für gewerbliche Zwecke genutzt.'
+            },
+            'en': {
+                langName: 'EN',
+                flagUrl: 'https://flagcdn.com/w20/gb.png',
+                navAbout: 'About Me',
+                navContact: 'Contact',
+                navAboutMobile: 'About Me',
+                navContactMobile: 'Contact',
+                languageLabelMobile: 'Language:',
+                heroTitle: 'Your Vision, Our Code: <span class="gradient-text">Intelligent Web Solutions</span>',
+                heroSubtitle: 'Smart AI, clever prompt engineering – your workflows reimagined. Automate, accelerate, inspire.',
+                heroCta: 'To the MBUPS Project',
+                heroComingSoon: '…more projects coming soon',
+                toolsTitle: 'A Brief Tool Overview:',
+                utmTitle: 'UTM Generator',
+                utmDesc: 'Quickly and accurately creates UTM parameters for precise campaign tracking.',
+                htmlTitle: 'HTML Translator',
+                htmlDesc: 'Translates text within HTML code without breaking the structure.',
+                htmlLongDesc: 'The HTML Translator is the perfect tool for anyone who wants to translate text within HTML code quickly, precisely, and while preserving the structure. Whether you operate multilingual websites, localize blog articles, or adapt e-commerce content – the HTML Translator translates your content without damaging the HTML structure.',
+                seoTitle: 'SEO Generator',
+                seoDesc: 'Generate SEO-optimized texts quickly & easily.',
+                seoLongDesc: 'The SEO Generator is the perfect tool for anyone who wants to create a perfect SEO-optimized text quickly and easily. The integrated Google API is perfect for this!',
+                comingSoonTitle: 'Coming soon..',
+                comingSoonDesc: 'Coming soon...',
+                footerText: '© <span id="year-footer-2"></span> AykolinoApps. With passion.',
+                footerDisclaimer: 'This domain is not used for commercial purposes.'
+            },
+            'fr': {
+                langName: 'FR',
+                flagUrl: 'https://flagcdn.com/w20/fr.png',
+                navAbout: 'À propos de moi',
+                navContact: 'Contact',
+                navAboutMobile: 'À propos de moi',
+                navContactMobile: 'Contact',
+                languageLabelMobile: 'Langue:',
+                heroTitle: 'Votre Vision, Notre Code: <span class="gradient-text">Solutions Web Intelligentes</span>',
+                heroSubtitle: 'IA intelligente, prompt engineering astucieux – vos flux de travail réinventés. Automatiser, accélérer, inspirer.',
+                heroCta: 'Vers le projet MBUPS',
+                heroComingSoon: '…plus de projets à venir bientôt',
+                toolsTitle: 'Un aperçu des outils:',
+                utmTitle: 'Générateur UTM',
+                utmDesc: 'Crée rapidement et sans erreur des paramètres UTM pour un suivi de campagne précis.',
+                htmlTitle: 'Traducteur HTML',
+                htmlDesc: 'Traduit le texte dans le code HTML sans en détruire la structure.',
+                htmlLongDesc: "Le Traducteur HTML est l'outil parfait pour tous ceux qui souhaitent traduire du texte au sein d'un code HTML de manière rapide, précise et en préservant la structure. Que vous gériez des sites web multilingues, localisiez des articles de blog ou adaptiez du contenu e-commerce, le Traducteur HTML traduit vos contenus sans endommager la structure HTML.",
+                seoTitle: 'Générateur SEO',
+                seoDesc: 'Générez rapidement et facilement des textes optimisés pour le SEO.',
+                seoLongDesc: "Le Générateur SEO est l'outil parfait pour tous ceux qui veulent créer un texte perfectly optimisé pour le SEO de manière simple et rapide. L'API Google intégrée est parfaite pour cela !",
+                comingSoonTitle: 'Bientôt disponible..',
+                comingSoonDesc: 'Bientôt disponible...',
+                footerText: '© <span id="year-footer-3"></span> AykolinoApps. Avec passion.',
+                footerDisclaimer: "Ce domaine n'est pas utilisé à des fins commerciales."
+            },
+            'es': {
+                langName: 'ES',
+                flagUrl: 'https://flagcdn.com/w20/es.png',
+                navAbout: 'Sobre mí',
+                navContact: 'Contacto',
+                navAboutMobile: 'Sobre mí',
+                navContactMobile: 'Contacto',
+                languageLabelMobile: 'Idioma:',
+                heroTitle: 'Tu Visión, Nuestro Código: <span class="gradient-text">Soluciones Web Inteligentes</span>',
+                heroSubtitle: 'IA inteligente, prompt engineering astuto – tus flujos de trabajo reinventados. Automatizar, acelerar, inspirar.',
+                heroCta: 'Al Proyecto MBUPS',
+                heroComingSoon: '…más proyectos próximamente',
+                toolsTitle: 'Un breve resumen de herramientas:',
+                utmTitle: 'Generador UTM',
+                utmDesc: 'Crea parámetros UTM de forma rápida y sin errores para un seguimiento preciso de campañas.',
+                htmlTitle: 'Traductor HTML',
+                htmlDesc: 'Traduce texto dentro del código HTML sin romper la estructura.',
+                htmlLongDesc: 'El Traductor HTML es la herramienta perfecta para cualquiera que desee traducir texto dentro de código HTML de forma rápida, precisa y conservando la estructura. Ya sea que gestiones sitios web multilingües, localices artículos de blog o adaptes contenido de comercio electrónico, el Traductor HTML traduce tu contenido sin dañar la estructura HTML.',
+                seoTitle: 'Generador SEO',
+                seoDesc: 'Genera textos optimizados para SEO de forma rápida y sencilla.',
+                seoLongDesc: 'El Generador SEO es la herramienta perfecta para cualquiera que quiera crear un texto perfectamente optimizado para SEO de forma rápida y sencilla. ¡La API de Google integrada es perfecta para ello!',
+                comingSoonTitle: 'Próximamente..',
+                comingSoonDesc: 'Próximamente...',
+                footerText: '© <span id="year-footer-4"></span> AykolinoApps. Con pasión.',
+                footerDisclaimer: 'Este dominio no se utiliza con fines comerciales.'
+            }
+        };
+
+        function setLanguage(lang) {
+            if (!translations[lang]) return;
+
+            document.documentElement.lang = lang;
+            localStorage.setItem('language', lang);
+
+            document.querySelectorAll('[data-translate-key]').forEach(el => {
+                const key = el.getAttribute('data-translate-key');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            
+            // Update year in footer after translation
+            const yearSpans = document.querySelectorAll('[id^="year-footer-"]');
+            yearSpans.forEach(span => {
+                if(span) span.textContent = new Date().getFullYear();
+            });
+
+            // Update language switcher display
+            const currentLangDesktop = document.getElementById('current-lang-desktop');
+            if (currentLangDesktop) {
+                currentLangDesktop.textContent = translations[lang].langName;
+            }
+            
+            const currentFlagDesktop = document.getElementById('current-flag-desktop');
+            if(currentFlagDesktop) {
+                currentFlagDesktop.src = translations[lang].flagUrl;
+                currentFlagDesktop.alt = `Flag of ${translations[lang].langName}`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('language') || 'de';
+            setLanguage(savedLang);
+        });
+        
+        // --- END LANGUAGE LOGIC ---
+
+        // --- START: NEW DROPDOWN CLICK-TOGGLE LOGIC ---
+        const langSwitcherButton = document.getElementById('lang-switcher-button');
+        const langSwitcherDropdown = document.getElementById('lang-switcher-dropdown');
+
+        if(langSwitcherButton && langSwitcherDropdown) {
+            langSwitcherButton.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevents the window event from closing it immediately
+                const isHidden = langSwitcherDropdown.style.display === 'none' || langSwitcherDropdown.style.display === '';
+                langSwitcherDropdown.style.display = isHidden ? 'block' : 'none';
+            });
+
+            // Hide dropdown when clicking anywhere else on the page
+            window.addEventListener('click', function(event) {
+                if (langSwitcherDropdown.style.display === 'block') {
+                    langSwitcherDropdown.style.display = 'none';
+                }
+            });
+
+            // When a language is selected, also close the dropdown
+            langSwitcherDropdown.addEventListener('click', function(event) {
+                langSwitcherDropdown.style.display = 'none';
+            });
+        }
+        // --- END: NEW DROPDOWN LOGIC ---
+
+        // Scroll-in Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        const elementsToAnimate = document.querySelectorAll('.fade-in-up');
+        elementsToAnimate.forEach(el => observer.observe(el));
+
+        // Slider Logic (wrapped in its own DOMContentLoaded to avoid issues)
+        document.addEventListener('DOMContentLoaded', () => {
+            const sliderWrapper = document.getElementById('slider-component-wrapper');
+            if (sliderWrapper && !sliderWrapper.dataset.initialized) {
+                const slider = sliderWrapper.querySelector('#slider-container');
+                const scrollLeftBtn = sliderWrapper.querySelector('#scroll-left');
+                const scrollRightBtn = sliderWrapper.querySelector('#scroll-right');
+
+                const updateButtons = () => {
+                    if (!slider) return;
+                    const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+                    
+                    scrollLeftBtn.style.display = slider.scrollLeft > 1 ? 'flex' : 'none';
+                    scrollRightBtn.style.display = slider.scrollLeft < maxScrollLeft - 1 ? 'flex' : 'none';
+                };
+
+                const scrollSlider = (direction) => {
+                    const card = slider.querySelector('a');
+                    if (card) {
+                        const scrollAmount = card.offsetWidth + parseInt(getComputedStyle(slider).gap);
+                        slider.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+                    }
+                };
+                
+                if (scrollLeftBtn && scrollRightBtn && slider) {
+                    scrollLeftBtn.addEventListener('click', () => scrollSlider(-1));
+                    scrollRightBtn.addEventListener('click', () => scrollSlider(1));
+                    slider.addEventListener('scroll', updateButtons, { passive: true });
+                
+                    setTimeout(updateButtons, 100); 
+                    window.addEventListener('resize', updateButtons);
+
+                    sliderWrapper.dataset.initialized = 'true';
+                }
+            }
+        });
+        
+        // Header & Mobile Menu Logic
+        const header = document.getElementById('main-header');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script></body></html>
