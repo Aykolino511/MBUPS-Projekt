@@ -14,6 +14,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
 
+    <!-- === GOATCOUNTER SKRIPT (MIT DEINEM LINK) === -->
+    <script data-goatcounter="https://aykolino.goatcounter.com/count" 
+            async 
+            src="//gc.zgo.at/count.js"></script>
+    <!-- === ENDE GOATCOUNTER === -->
+
     <style>
         /* Globale Stile & Animationen */
         body {
@@ -157,14 +163,14 @@
         <nav id="main-header" class="header fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b border-transparent transition-colors duration-300">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-20">
-                    <a href="https://aykolino.de" class="text-2xl font-bold tracking-tight text-white">
+                    <a href="https://aykolino.de" class="text-2xl font-bold tracking-tight text-white" data-goatcounter-click="nav-logo-mbups">
                         Aykolino<span class="gradient-text">Apps</span>
                     </a>
 
                     <!-- Desktop Navigation -->
                     <div class="hidden md:flex items-center space-x-8">
-                        <a href="https://uebermich.aykolino.de" class="text-gray-300 hover:text-white transition-colors" data-translate-key="navAbout">Über mich</a>
-                        <a href="mailto:ayko.tiedtke2@yahoo.de" class="text-gray-300 hover:text-white transition-colors" data-translate-key="navContact">Kontakt</a>
+                        <a href="https://uebermich.aykolino.de" class="text-gray-300 hover:text-white transition-colors" data-translate-key="navAbout" data-goatcounter-click="nav-desktop-ueber-mich">Über mich</a>
+                        <a href="mailto:ayko.tiedtke2@yahoo.de" class="text-gray-300 hover:text-white transition-colors" data-translate-key="navContact" data-goatcounter-click="nav-desktop-kontakt">Kontakt</a>
                         
                         <!-- Sprachauswahl -->
                         <div class="relative lang-switcher">
@@ -204,8 +210,8 @@
             </div>
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden">
-                <a href="https://uebermich.aykolino.de" class="block py-3 px-4 text-sm text-gray-200 hover:bg-gray-800" data-translate-key="navAbout">Über mich</a>
-                <a href="mailto:ayko.tiedtke2@yahoo.de" class="block py-3 px-4 text-sm text-gray-200 hover:bg-gray-800" data-translate-key="navContact">Kontakt</a>
+                <a href="https://uebermich.aykolino.de" class="block py-3 px-4 text-sm text-gray-200 hover:bg-gray-800" data-translate-key="navAbout" data-goatcounter-click="nav-mobil-ueber-mich">Über mich</a>
+                <a href="mailto:ayko.tiedtke2@yahoo.de" class="block py-3 px-4 text-sm text-gray-200 hover:bg-gray-800" data-translate-key="navContact" data-goatcounter-click="nav-mobil-kontakt">Kontakt</a>
                 <div class="px-4 pt-3 pb-1 border-t border-gray-700">
                     <p class="text-xs text-gray-400 mb-2" data-translate-key="languageLabelMobile">Sprache:</p>
                     <a href="#" class="flex items-center w-full py-2 text-sm text-gray-200 hover:bg-gray-800" onclick="setLanguage('de', event)">
@@ -244,7 +250,7 @@
             <h2 class="text-4xl font-bold text-center mb-12 fade-in-up" data-translate-key="toolsTitle">Meine MBUPS-Tools</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <!-- Card 1: UTM-Generator -->
-                <a href="https://utm-generator.aykolino.de/" target="_blank" class="block fade-in-up" style="transition-delay: 100ms;">
+                <a href="https://utm-generator.aykolino.de/" target="_blank" class="block fade-in-up" style="transition-delay: 100ms;" data-goatcounter-click="app-card-utm-generator">
                     <div class="card rounded-2xl p-8 h-full flex flex-col items-center text-center">
                         <div class="logo-utm mb-6">
                             <div class="utm-center"></div><div class="utm-dot"></div><div class="utm-dot"></div><div class="utm-dot"></div><div class="utm-dot"></div>
@@ -255,7 +261,7 @@
                     </div>
                 </a>
                 <!-- Card 2: HTML-Translator -->
-                <a href="https://html-translator.aykolino.de/" target="_blank" class="block fade-in-up" style="transition-delay: 200ms;">
+                <a href="https://html-translator.aykolino.de/" target="_blank" class="block fade-in-up" style="transition-delay: 200ms;" data-goatcounter-click="app-card-html-translator">
                     <div class="card rounded-2xl p-8 h-full flex flex-col items-center text-center">
                         <div class="logo-html mb-6"><span>&lt;</span><span class="html-arrow">⇄</span><span>&gt;</span></div>
                         <h3 class="text-2xl font-bold text-white mb-2" data-translate-key="htmlTitle">HTML-Translator</h3>
@@ -264,7 +270,7 @@
                     </div>
                 </a>
                 <!-- Card 3: Excel-Comparison -->
-                <a href="https://excel-comparison.aykolino.de/" target="_blank" class="block fade-in-up" style="transition-delay: 300ms;">
+                <a href="https://excel-comparison.aykolino.de/" target="_blank" class="block fade-in-up" style="transition-delay: 300ms;" data-goatcounter-click="app-card-excel-comparison">
                     <div class="card rounded-2xl p-8 h-full flex flex-col items-center text-center">
                         <div class="logo-excel mb-6">
                            <div class="excel-grid"><div class="excel-cell"></div><div class="excel-cell"></div><div class="excel-cell"></div><div class="excel-cell"></div><div class="excel-cell"></div><div class="excel-cell"></div><div class="excel-cell"></div><div class="excel-cell"></div><div class="excel-cell"></div></div>
@@ -276,7 +282,7 @@
                     </div>
                 </a>
                 <!-- Card 4: Articlenumber-Generator -->
-                <a href="https://an-generator.aykolino.de/" target="_blank" class="block fade-in-up" style="transition-delay: 400ms;">
+                <a href="https://an-generator.aykolino.de/" target="_blank" class="block fade-in-up" style="transition-delay: 400ms;" data-goatcounter-click="app-card-an-generator">
                     <div class="card rounded-2xl p-8 h-full flex flex-col items-center text-center">
                         <div class="logo-an mb-6">
                             <div class="an-reel"><div class="an-number-item">8351</div><div class="an-number-item">4927</div><div class="an-number-item">1064</div><div class="an-number-item">8351</div></div>
@@ -309,7 +315,7 @@
                 navAbout: 'Über mich',
                 navContact: 'Kontakt',
                 languageLabelMobile: 'Sprache:',
-                heroTitle: 'Innovative <span class="gradient-text">Web-Tools</span> für <a href="https://usedparts.mercedes-benz.de/startseite/" style="color: white; text-decoration: underline;">MBUPS</a>',
+                heroTitle: 'Innovative <span class="gradient-text">Web-Tools</span> für <a href="https://usedparts.mercedes-benz.de/startseite/" style="color: white; text-decoration: underline;" data-goatcounter-click="hero-link-mbups-external">MBUPS</a>',
                 heroSubtitle1: 'Hey! Ich bin Ayko, MBUPS-Praktikant der nützliche und einfach zu bedienende Web-Apps für euer Unternehmen entwickelt.',
                 heroSubtitle2: 'Meine Tools helfen dir, Arbeitszeit zu sparen und deinen Workflow zu automatisieren – ganz ohne komplizierte Technik.',
                 toolsTitle: 'Meine MBUPS-Tools',
@@ -331,7 +337,7 @@
                 navAbout: 'About Me',
                 navContact: 'Contact',
                 languageLabelMobile: 'Language:',
-                heroTitle: 'Innovative <span class="gradient-text">Web Tools</span> for <a href="https://usedparts.mercedes-benz.de/startseite/" style="color: white; text-decoration: underline;">MBUPS</a>',
+                heroTitle: 'Innovative <span class="gradient-text">Web Tools</span> for <a href="https://usedparts.mercedes-benz.de/startseite/" style="color: white; text-decoration: underline;" data-goatcounter-click="hero-link-mbups-external">MBUPS</a>',
                 heroSubtitle1: "Hey! I'm Ayko, an MBUPS intern developing useful and easy-to-use web apps for your company.",
                 heroSubtitle2: 'My tools help you save time and automate your workflow - without any complicated technology.',
                 toolsTitle: 'My MBUPS-Tools',
@@ -353,7 +359,7 @@
                 navAbout: 'À propos de moi',
                 navContact: 'Contact',
                 languageLabelMobile: 'Langue:',
-                heroTitle: 'Outils Web <span class="gradient-text">Innovants</span> pour <a href="https://usedparts.mercedes-benz.de/startseite/" style="color: white; text-decoration: underline;">MBUPS</a>',
+                heroTitle: 'Outils Web <span class="gradient-text">Innovants</span> pour <a href="https://usedparts.mercedes-benz.de/startseite/" style="color: white; text-decoration: underline;" data-goatcounter-click="hero-link-mbups-external">MBUPS</a>',
                 heroSubtitle1: "Salut ! Je suis Ayko, stagiaire chez MBUPS, et je développe des applications web utiles et simples d'utilisation pour votre entreprise.",
                 heroSubtitle2: "Mes outils vous aident à gagner du temps et à automatiser votre flux de travail, sans aucune technologie compliquée.",
                 toolsTitle: 'Mes outils MBUPS',
@@ -375,7 +381,7 @@
                 navAbout: 'Sobre mí',
                 navContact: 'Contacto',
                 languageLabelMobile: 'Idioma:',
-                heroTitle: 'Herramientas Web <span class="gradient-text">Innovadoras</span> para <a href="https://usedparts.mercedes-benz.de/startseite/" style="color: white; text-decoration: underline;">MBUPS</a>',
+                heroTitle: 'Herramientas Web <span class="gradient-text">Innovadoras</span> para <a href="https://usedparts.mercedes-benz.de/startseite/" style="color: white; text-decoration: underline;" data-goatcounter-click="hero-link-mbups-external">MBUPS</a>',
                 heroSubtitle1: '¡Hola! Soy Ayko, un pasante de MBUPS que desarrolla aplicaciones web útiles y fáciles de usar para su empresa.',
                 heroSubtitle2: 'Mis herramientas le ayudan a ahorrar tiempo y automatizar su flujo de trabajo, sin tecnología complicada.',
                 toolsTitle: 'Mis herramientas de MBUPS',
@@ -405,6 +411,15 @@
 
             // Funktion zum Setzen der Sprache
             window.setLanguage = function(lang, event) {
+                // --- GoatCounter Tracking ---
+                if (window.goatcounter) {
+                    window.goatcounter.count({
+                        path: 'lang-select-' + lang, // z.B. 'lang-select-de'
+                        event: true
+                    });
+                }
+                // --- Ende GoatCounter ---
+
                 if (event) event.preventDefault();
                 if (!translations[lang]) return;
 
@@ -422,7 +437,10 @@
 
                 // Jahreszahl im Footer aktualisieren (nach Übersetzung)
                 const yearSpan = document.getElementById('year') || document.getElementById('year-footer');
-                if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+                if (yearSpan) {
+                     yearSpan.id = 'year-footer'; // ID konsistent halten
+                    yearSpan.textContent = new Date().getFullYear();
+                }
 
                 // Anzeige der Sprachauswahl aktualisieren
                 const currentLangDesktop = document.getElementById('current-lang-desktop');
@@ -448,6 +466,17 @@
             if (langSwitcherButton) {
                 langSwitcherButton.addEventListener('click', (event) => {
                     event.stopPropagation();
+                    
+                    // --- GoatCounter Tracking ---
+                    if (window.goatcounter) {
+                        const willBeOpen = !langSwitcherDropdown.classList.contains('open');
+                        window.goatcounter.count({
+                            path: willBeOpen ? 'lang-switcher-desktop-open' : 'lang-switcher-desktop-close',
+                            event: true
+                        });
+                    }
+                    // --- Ende GoatCounter ---
+
                     langSwitcherDropdown.classList.toggle('open');
                 });
             }
@@ -462,6 +491,16 @@
             // Mobiles Menü
             if (mobileMenuButton) {
                 mobileMenuButton.addEventListener('click', () => {
+                    // --- GoatCounter Tracking ---
+                    if (window.goatcounter) {
+                        const willBeOpen = mobileMenu.classList.contains('hidden');
+                        window.goatcounter.count({
+                            path: willBeOpen ? 'mobile-menu-open' : 'mobile-menu-close',
+                            event: true
+                        });
+                    }
+                    // --- Ende GoatCounter ---
+
                     mobileMenu.classList.toggle('hidden');
                 });
             }
@@ -489,4 +528,3 @@
     </script>
 </body>
 </html>
-
